@@ -1,0 +1,37 @@
+@use "../abstracts/index" as *;
+
+.hero {
+    margin-bottom: pxToRem(120);
+    
+    border-radius: $border-radius-small;
+
+    position: relative;
+    overflow: hidden;
+
+    &__content {
+        position: absolute;
+        inset: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-inline: pxToRem(24);
+
+        text-align: center;
+        color: $clr-neutral-100;
+
+        .title {
+            margin-bottom: pxToRem(24);
+        }
+
+        .text {
+            color: toHsla($clr-neutral-100, 0.8);
+        }
+
+        .btn {
+            margin-top: pxToRem(39);
+        }
+    }
+}

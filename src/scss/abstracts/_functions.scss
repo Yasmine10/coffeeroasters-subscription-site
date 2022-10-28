@@ -7,3 +7,7 @@
 @function pxToEm($value) {
     @return math.div($value * 1px, 16px) * 1em;
 }
+
+@function toHsla($color, $alpha) {
+    @return hsla(hue($color), saturation($color), lightness($color), $alpha);
+}

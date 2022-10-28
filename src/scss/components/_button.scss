@@ -3,8 +3,8 @@
 .btn {
     display: block;
 
-    width: max-content;
-    padding: pxToRem(15) pxToRem(80.5) pxToRem(16);
+    width: fit-content;
+    padding: pxToRem(15) pxToRem(31) pxToRem(16);
 
     border-radius: pxToRem(6);
 
@@ -13,6 +13,9 @@
     font-weight: $fw-black;
     line-height: var(--fs-lh-btn);
     
+    @include for-tablet-up {
+        padding: pxToRem(15) pxToRem(80.5) pxToRem(16);
+    }
 
     &--primary {
         background-color: $clr-primary-400;

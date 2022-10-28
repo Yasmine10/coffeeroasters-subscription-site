@@ -7,25 +7,37 @@ body {
     line-height: var(--fs-lh-body);
 }
 
+
 .h1 {
+    font-family: $ff-secondary;
     font-size: var(--fs-heading-1);
     font-weight: $fw-black;
     line-height: var(--fs-lh-heading-1);
 }
 
 .h2 {
+    font-family: $ff-secondary;
     font-size: var(--fs-heading-2);
     font-weight: $fw-black;
     line-height: var(--fs-lh-heading-2);
+
+    &--mobile {
+        @include for-phone-only {
+            font-size: pxToRem(28);
+            line-height: pxToRem(28);
+        }
+    }
 }
 
 .h3 {
+    font-family: $ff-secondary;
     font-size: var(--fs-heading-3);
     font-weight: $fw-black;
     line-height: var(--fs-lh-heading-3);
 }
 
 .h4 {
+    font-family: $ff-secondary;
     font-size: var(--fs-heading-4);
     font-weight: $fw-black;
     line-height: var(--fs-lh-heading-4);

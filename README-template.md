@@ -87,6 +87,36 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 **Turn svg into react component with vite plugin**
 https://www.npmjs.com/package/vite-plugin-svgr
 
+**Learned how to use React Router**
+install: npm i react-router-dom
+use in main.jsx: 
+  - add import (import { BrowserRouter } from 'react-router-dom')
+  - add <BrowserRouter></BrowserRouter> arround <App/>
+use in App.jsx:
+  - add imports ( import { Routes, Route } from 'react-router-dom' + imports from views like about, home, subscribe)
+  - add following in <div id="App"></div>:
+    <Routes>
+      <Route path="about" element={<About />} />
+      <Route path="subscribe" element={<Subscribe />} />
+      <Route path="/" element={<Home />} />
+    </Routes>
+use in header component:
+  - add import (import { Link } from 'react-router-dom')
+  - add following code:  (this is the navigation)
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/subscribe">Subscribe</Link>
+        </li>
+      </ul>
+    </nav>
+
 ### Continued development
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.

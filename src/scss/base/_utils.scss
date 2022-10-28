@@ -1,0 +1,41 @@
+@use "../abstracts/index" as *;
+
+.container {
+    --spacing: 48px;
+
+    @include for-tablet-up {
+        --spacing: 80px;
+    }
+
+    @include for-desktop-up {
+        --spacing: 160px;
+    }
+
+    max-width: 90rem;
+    width: calc(100% - var(--spacing));
+    margin-inline: auto;
+}
+
+.container--l {
+    --spacing: 48px;
+
+    @include for-tablet-up {
+        --spacing: 80px;
+    }
+
+    @include for-desktop-up {
+        --spacing: 330px;
+    }
+
+    max-width: 90rem;
+    width: calc(100% - var(--spacing));
+    margin-inline: auto;
+}
+
+.container-m {
+
+}
+
+.container-s {
+
+}
