@@ -1,0 +1,173 @@
+@use "../abstracts/index" as *;
+@use "sass:math";
+
+.process {
+    margin-bottom: pxToRem(120);
+
+    &--dark {
+        background-color: $clr-neutral-900 !important;
+        padding-block: pxToRem(80);
+        border-radius: $border-radius-small;
+
+        .process {
+            &__title {
+                color: $clr-neutral-100 !important;
+            }
+
+            &__item {
+                .title {
+                    color: $clr-neutral-100 !important;
+                }
+
+                .explanation {
+                    color: $clr-neutral-100 !important;
+                }
+            }
+        }
+    }
+
+    &__timeline {
+        display: none;
+    }
+
+    &__title {
+        margin-bottom: pxToRem(80);
+
+        text-align: center;
+        color: $clr-neutral-390;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: pxToRem(56);
+    }
+
+    &__item {
+        text-align: center;
+
+        .step {
+            margin-bottom: pxToRem(24);
+
+            font-family: $ff-secondary;
+            font-size: pxToRem(72);
+            font-weight: $fw-black;
+            line-height: pxToRem(72);
+
+            color: $clr-primary-100;
+        }
+
+        .title {
+            margin-bottom: pxToRem(24);
+
+            color: $clr-neutral-900;
+        }
+
+        .explanation {
+            color: $clr-neutral-900;
+        }
+    }
+
+    &__btn {
+        margin-inline: auto;
+        margin-top: pxToRem(79);
+    }
+
+    @include for-tablet-up {
+        margin-bottom: pxToRem(144);
+
+        &__timeline {
+            display: initial;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+
+        &__title {
+            text-align: start;
+        }
+
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+            gap: pxToRem(16);
+        }
+
+        &__item {
+            text-align: start;
+
+            padding-top: pxToRem(79);
+
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                
+
+                width: pxToRem(31);
+                aspect-ratio: 1;
+
+                background-color: $clr-neutral-100;
+                border-radius: 50%;
+                border: 2px solid $clr-primary-400;
+            }
+
+            &:not(:last-of-type)::after {
+                content: "";
+                position: absolute;
+                top: pxToRem(math.div(31px, 2px));
+                left: pxToRem(31);
+                z-index: -1;
+
+                width: 100%;
+                height: 2px;
+                background-color: $clr-primary-100;
+            }
+
+            .step {
+                margin-bottom: pxToRem(42);
+            }
+    
+            .title {
+                margin-bottom: pxToRem(38);
+            }
+        }
+
+        &__btn {
+            margin-inline: initial;
+            margin-top: pxToRem(44);
+        }
+    }
+
+    @include for-desktop-up {
+        margin-bottom: pxToRem(200);
+
+        > div {
+            padding-right: pxToRem(65);
+        }
+
+        &__list {
+            gap: pxToRem(95);
+        }
+
+        &__item {
+            padding-top: pxToRem(98);
+
+            &:not(:last-of-type)::after {
+                width: calc(100% + 95px);
+            }
+
+            .step {
+                margin-bottom: pxToRem(38);
+            }
+
+            .title {
+                margin-bottom: pxToRem(42);
+                padding-right: pxToRem(30);
+            }
+        }
+    }
+}

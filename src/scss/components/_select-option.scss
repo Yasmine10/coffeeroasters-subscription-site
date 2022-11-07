@@ -1,0 +1,32 @@
+@use "../abstracts/index" as *;
+
+.select-option {
+    .radio-custom {
+        // appearance: none;
+        // background-color: transparent;
+        // margin: 0;
+
+        // opacity: 0;
+        // visibility: hidden;
+
+        ~ label {
+            background-color: $clr-neutral-200;
+            
+            .content {
+                &__title {
+    
+                }
+    
+                &__description {
+    
+                }
+            }
+        }
+    
+        &:checked ~ label {
+            background-color: $clr-primary-400;
+        }
+    }
+
+    
+}

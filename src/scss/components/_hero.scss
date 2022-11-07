@@ -31,7 +31,32 @@
         }
 
         .btn {
-            margin-top: pxToRem(39);
+            margin-top: pxToRem(40);
+        }
+    }
+
+    @include for-tablet-up {
+        margin-bottom: pxToRem(144);
+
+        &__content {
+            align-items: flex-start;
+
+            max-width: pxToRem(398);
+
+            text-align: start;
+
+            padding-left: pxToRem(58);
+            padding-right: 0;
+        }
+    }
+
+    @include for-desktop-up {
+        &__content {
+            max-width: pxToRem(600);
+
+            .text {
+                max-width: pxToRem(445);
+            }
         }
     }
 }

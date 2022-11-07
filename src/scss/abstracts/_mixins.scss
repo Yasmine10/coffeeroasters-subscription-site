@@ -18,3 +18,10 @@ $desktop: 1200px;
         @content;
     }
 }
+
+
+@mixin between-tablet-desktop {
+    @media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+        @content;
+    }
+}

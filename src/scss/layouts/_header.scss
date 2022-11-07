@@ -1,0 +1,48 @@
+@use "../abstracts/index" as *;
+
+#header {
+    margin-block: pxToRem(40) pxToRem(53);
+
+    > nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        align-items: center;
+        gap: pxToRem(33);
+
+        > li a {
+            font-size: var(--fs-nav);
+            font-weight: $fw-bold;
+            line-height: var(--fs-lh-nav);
+            letter-spacing: pxToRem(0.92);
+            text-transform: uppercase;
+
+            color: $clr-neutral-400;
+
+            transition: all 400ms ease-in-out;
+
+            &:hover,
+            &:focus-visible {
+                color: $clr-neutral-900;
+            }
+
+        }
+    }
+
+    @include for-phone-only {
+        .nav-list {
+            display: none;
+        }
+    }
+
+    @include for-desktop-up {
+        margin-block: pxToRem(43) pxToRem(44);
+    }
+}

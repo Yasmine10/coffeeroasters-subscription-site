@@ -44,6 +44,7 @@ body {
 }
 
 .alternate-title {
+    font-family: $ff-secondary;
     font-size: var(--fs-alternate-title);
     font-weight: $fw-black;
     line-height: var(--fs-lh-alternate-title);

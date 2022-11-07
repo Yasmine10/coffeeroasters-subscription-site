@@ -1,0 +1,106 @@
+@use "../abstracts/index" as *;
+
+#footer {
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: pxToRem(48);
+
+        background-color: $clr-neutral-900;
+
+        margin-bottom: pxToRem(72);
+        padding-block: pxToRem(54);
+
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: pxToRem(48);
+    }
+
+    .logo-container {
+        svg g path:first-child {
+            fill: white;
+        }
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: pxToRem(24);
+
+        > li a {
+            font-size: var(--fs-nav-footer);
+            font-weight: $fw-bold;
+            line-height: var(--fs-lh-nav-footer);
+            letter-spacing: pxToRem(0.92);
+            text-transform: uppercase;
+
+            color: #83888F;
+
+            transition: all 400ms ease-in-out;
+
+            &:hover,
+            &:focus-visible {
+                color: $clr-neutral-100;
+            }
+        }
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: pxToRem(24);
+
+        &__item {
+
+            svg path {
+                transition: all 300ms ease-in-out;
+            }
+
+            &:hover,
+            &:focus-within {
+                svg path {
+                    fill: $clr-primary-100;
+                }
+            }
+
+            
+        }
+    }
+
+    @include for-tablet-up {
+        > div {
+            gap: pxToRem(65);
+        }
+
+        nav {
+            gap: pxToRem(32);
+        }
+
+        .nav-list {
+            flex-direction: row;
+        }
+    }
+
+    @include for-desktop-up {
+        > div {
+            flex-direction: row;
+            justify-content: space-between;
+
+            margin-bottom: pxToRem(88);
+            padding-inline: pxToRem(85);
+        }
+
+        nav {
+            flex-direction: row;
+            gap: pxToRem(103);
+        }
+    }
+}

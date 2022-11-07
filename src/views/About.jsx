@@ -1,6 +1,6 @@
 import Hero from "../components/general/Hero";
 
-import { ReactComponent as IconUk } from "../assets/about/desktop/illustration-uk.svg";
+import { ReactComponent as IconUk } from "../assets/images/about/desktop/illustration-uk.svg";
 
 const About = () => {
     const hero = {

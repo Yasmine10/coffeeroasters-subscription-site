@@ -12,10 +12,10 @@
     font-size: var(--fs-btn);
     font-weight: $fw-black;
     line-height: var(--fs-lh-btn);
-    
-    @include for-tablet-up {
-        padding: pxToRem(15) pxToRem(80.5) pxToRem(16);
-    }
+
+    transition: all 400ms ease-in-out;
+
+    cursor: pointer;
 
     &--primary {
         background-color: $clr-primary-400;

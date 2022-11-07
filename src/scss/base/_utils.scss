@@ -32,8 +32,20 @@
     margin-inline: auto;
 }
 
-.container-m {
+.container--m {
+    --spacing: 48px;
 
+    @include for-tablet-up {
+        --spacing: 80px;
+    }
+
+    @include for-desktop-up {
+        --spacing: 330px;
+    }
+
+    max-width: 1110px;
+    width: calc(100% - var(--spacing));
+    margin-inline: auto;
 }
 
 .container-s {
