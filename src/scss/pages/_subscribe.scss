@@ -1,0 +1,34 @@
+@use "../abstracts/index" as *;
+
+.subscribe-form {
+    margin-top: pxToRem(120);
+    margin-bottom: pxToRem(120);
+}
+
+.order-summary {
+    background-color: $clr-neutral-900;
+    border-radius: $border-radius-small;
+
+    margin-bottom: pxToRem(56);
+    padding: pxToRem(32) pxToRem(24);
+
+    &__title {
+        padding-bottom: pxToRem(8);
+
+        text-transform: uppercase;
+        color: toHsla($clr-neutral-100, 0.5);
+    }
+
+    &__text {
+        font-family: $ff-secondary;
+        color: $clr-neutral-100;
+
+        > span {
+            color: $clr-primary-400;
+        }
+    }
+}
+
+.subscribe-btn {
+    margin-inline: auto;
+}

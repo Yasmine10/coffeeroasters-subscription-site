@@ -154,7 +154,7 @@ const Subscribe = () => {
             <Process process={process} />
 
             {/* Ordering coffee */}
-            <form action="">
+            <form action="" className="subscribe-form | container">
                 <SelectOption selectOption={preferencesOptions} />
                 <SelectOption selectOption={typeOptions} />
                 <SelectOption selectOption={quantityOptions} />
@@ -163,7 +163,7 @@ const Subscribe = () => {
 
                 <div className="order-summary">
                     <p className="order-summary__title">Order summary</p>
-                    <p className="order-summary__text">
+                    <p className="order-summary__text | h4">
                         "I drink my coffee as <span id="order-summary-preference"></span>, 
                         with a <span id="order-summary-type"></span> type of bean. 
                         <span id="order-summary-quantity"></span> of ground ala <span id="order-summary-grid"></span>, 
@@ -171,11 +171,8 @@ const Subscribe = () => {
                     </p>
                 </div>
 
-                <button className="btn btn--primary">Greate my plan!</button>
+                <button className="subscribe-btn | btn btn--primary">Greate my plan!</button>
             </form>
-
-            
-            
         </main>
     );
 }
